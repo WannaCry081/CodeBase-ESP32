@@ -1,10 +1,11 @@
+#ifndef ESPWIFI_HPP
+#define ESPWIFI_HPP
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <Update.h>
 #include <LittleFS.h>
 #include <SD.h>
-#ifndef ESPWIFI_HPP
-#define ESPWIFI_HPP
 
 class ESPWifi
 {
