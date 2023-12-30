@@ -14,7 +14,7 @@ private:
     int _counter;
 
 public:
-    ESPWifi(String &ssid, String &password);
+    ESPWifi(const String &ssid, const String &password);
     bool IsConnect();
     bool IsSuccess();
 };
