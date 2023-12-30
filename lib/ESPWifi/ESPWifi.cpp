@@ -5,3 +5,8 @@ ESPWifi::ESPWifi(String &ssid, String &password) : _ssid(ssid), _password(passwo
     WiFi.begin(_ssid, _password);
 }
 
+bool ESPWifi::IsConnect()
+{
+    return WiFi.status() != WL_CONNECTED;
+}
+
