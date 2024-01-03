@@ -4,18 +4,20 @@
 #include <Arduino.h>
 #include <Firebase_ESP_Client.h>
 
-class ESPFirebase {
-    private:
-        FirebaseData _fbdo;
-        FirebaseAuth _auth;
-        FirebaseConfig _config;
+class ESPFirebase
+{
+private:
+    FirebaseData _fbdo;
+    FirebaseAuth _auth;
+    FirebaseConfig _config;
 
-    public:
-        ESPFirebase(const String &apiKey, const String &databaseUrl);
-        bool IsSignUp(void);
-        bool IsSignUp(String email, String password);
-        void InitializeFirebase(void);
+public:
+    ESPFirebase(const String &apiKey, const String &databaseUrl);
+    bool IsSignUp(void);
+    bool IsSignUp(String email, String password);
+    void InitializeFirebase(void);
+
+    bool pushStringData(String &path, String &data);
 };
-
 
 #endif
