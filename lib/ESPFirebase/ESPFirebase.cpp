@@ -58,3 +58,12 @@ bool ESPFirebase::updateStringData(String &path, String &data) {
         return false;
     }
 }
+
+bool ESPFirebase::deleteData(String &path){
+    if (Firebase.RTDB.deleteNode(&_fbdo, path)){
+        return true;
+    } else {
+        Serial.println(_fbdo.errorReason());
+        return false;
+    }
+}

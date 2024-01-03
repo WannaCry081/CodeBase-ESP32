@@ -21,6 +21,7 @@ public:
     bool pushStringData(String &path, String &data);
     bool readStringData(String &path, String &result);
     bool updateStringData(String &path, String &data);
+    bool deleteData(String &path);
 };
 
 #endif
