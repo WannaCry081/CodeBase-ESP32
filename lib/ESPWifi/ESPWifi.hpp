@@ -18,6 +18,7 @@ public:
     ESPWifi(const String &ssid, const String &password);
     bool IsConnect();
     bool IsSuccess();
+    void DisplayStatus();
 };
 
 #endif
