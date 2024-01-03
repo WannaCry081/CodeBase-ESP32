@@ -10,6 +10,7 @@ private:
     FirebaseData _fbdo;
     FirebaseAuth _auth;
     FirebaseConfig _config;
+    FirebaseJson _json;
 
 public:
     ESPFirebase(const String &apiKey, const String &databaseUrl);
@@ -19,6 +20,7 @@ public:
 
     bool pushStringData(String &path, String &data);
     bool readStringData(String &path, String &result);
+    bool updateStringData(String &path, String &data);
 };
 
 #endif

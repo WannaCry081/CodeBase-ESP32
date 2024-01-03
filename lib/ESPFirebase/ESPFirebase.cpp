@@ -47,3 +47,14 @@ bool ESPFirebase::readStringData(String &path, String &result) {
         return false;
     }
 }
+
+bool ESPFirebase::updateStringData(String &path, String &data) {
+    _json.set("stringValue", data);
+
+    if (Firebase.RTDB.updateNode(&_fbdo, path, &_json)) {
+        return true;
+    } else {
+        Serial.println(_fbdo.errorReason());
+        return false;
+    }
+}
