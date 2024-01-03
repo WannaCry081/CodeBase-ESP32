@@ -37,3 +37,13 @@ bool ESPFirebase::pushStringData(String &path, String &data)
         return false;
     }
 }
+
+bool ESPFirebase::readStringData(String &path, String &result) {
+    if (Firebase.RTDB.getString(&_fbdo, path)){
+        result = _fbdo.to<String>();
+        return true;
+    } else {
+        Serial.println(_fbdo.errorReason());
+        return false;
+    }
+}

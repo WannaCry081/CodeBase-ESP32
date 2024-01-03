@@ -18,6 +18,7 @@ public:
     void InitializeFirebase(void);
 
     bool pushStringData(String &path, String &data);
+    bool readStringData(String &path, String &result);
 };
 
 #endif
