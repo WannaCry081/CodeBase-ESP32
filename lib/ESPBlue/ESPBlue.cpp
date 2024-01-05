@@ -61,7 +61,10 @@ void SampleCallback::onRead(BLECharacteristic *pCharacteristic)
 {
 }
 
-    BLEDevice::init("ESP32_BLE");
+// This method is called when the characteristic sends a notification.
+void SampleCallback::onNotify(BLECharacteristic *pCharacteristic)
+{
+}
 
     BLEServer *pServer = BLEDevice::createServer();
 
