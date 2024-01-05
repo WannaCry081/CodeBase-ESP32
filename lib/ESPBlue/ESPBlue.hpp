@@ -1,8 +1,3 @@
-/**
- * @file ESPBlue.hpp
- * @brief ESPBlue class definition for managing Bluetooth functionality on ESP32.
- */
-
 #ifndef ESPBLUE_HPP
 #define ESPBLUE_HPP
 
