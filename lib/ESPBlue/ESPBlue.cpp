@@ -25,8 +25,8 @@ void ESPBlue::MyCallbacks::onWrite(BLECharacteristic *pCharacteristic)
 
 void ESPBlue::setup()
 {
-    const char * SERVICE_UUID = _serviceUUID.c_str();
-    const char * CHARACTERISTIC_UUID = _characteristicUUID.c_str();
+    const char *SERVICE_UUID = _serviceUUID.c_str();
+    const char *CHARACTERISTIC_UUID = _characteristicUUID.c_str();
 
     BLEDevice::init("ESP32_BLE");
 

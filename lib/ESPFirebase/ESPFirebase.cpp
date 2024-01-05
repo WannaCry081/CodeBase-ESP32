@@ -38,31 +38,43 @@ bool ESPFirebase::pushStringData(String &path, String &data)
     }
 }
 
-bool ESPFirebase::readStringData(String &path, String &result) {
-    if (Firebase.RTDB.getString(&_fbdo, path)){
+bool ESPFirebase::readStringData(String &path, String &result)
+{
+    if (Firebase.RTDB.getString(&_fbdo, path))
+    {
         result = _fbdo.to<String>();
         return true;
-    } else {
+    }
+    else
+    {
         Serial.println(_fbdo.errorReason());
         return false;
     }
 }
 
-bool ESPFirebase::updateStringData(String &path, String &data) {
+bool ESPFirebase::updateStringData(String &path, String &data)
+{
     _json.set("stringValue", data);
 
-    if (Firebase.RTDB.updateNode(&_fbdo, path, &_json)) {
+    if (Firebase.RTDB.updateNode(&_fbdo, path, &_json))
+    {
         return true;
-    } else {
+    }
+    else
+    {
         Serial.println(_fbdo.errorReason());
         return false;
     }
 }
 
-bool ESPFirebase::deleteData(String &path){
-    if (Firebase.RTDB.deleteNode(&_fbdo, path)){
+bool ESPFirebase::deleteData(String &path)
+{
+    if (Firebase.RTDB.deleteNode(&_fbdo, path))
+    {
         return true;
-    } else {
+    }
+    else
+    {
         Serial.println(_fbdo.errorReason());
         return false;
     }
