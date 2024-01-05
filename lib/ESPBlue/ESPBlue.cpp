@@ -66,18 +66,9 @@ void SampleCallback::onNotify(BLECharacteristic *pCharacteristic)
 {
 }
 
-    BLEServer *pServer = BLEDevice::createServer();
-
-    BLEService *pService = pServer->createService(SERVICE_UUID);
-    _pCharacteristic = pService->createCharacteristic(
-        CHARACTERISTIC_UUID,
-        BLECharacteristic::PROPERTY_READ |
-            BLECharacteristic::PROPERTY_WRITE);
-
-    _pCharacteristic->setCallbacks(new MyCallbacks());
-
-    pService->start();
-    pServer->getAdvertising()->start();
+// This method is called when there is a status change in the characteristic.
+void SampleCallback::onStatus(BLECharacteristic *pCharacteristic, Status s, uint32_t code)
+{
 }
 
 void ESPBlue::loop()
