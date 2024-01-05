@@ -41,6 +41,7 @@ void SampleCallback::onWrite(BLECharacteristic *pCharacteristic)
 {
     std::string value = pCharacteristic->getValue();
 
+    // Sample code for LED on and off
     if (value.length() > 0)
     {
         Serial.println("Received Value: " + String(value.c_str()));
@@ -55,10 +56,10 @@ void SampleCallback::onWrite(BLECharacteristic *pCharacteristic)
     }
 }
 
-void ESPBlue::setup()
+// This method is called when a central device requests to read the value of the characteristic.
+void SampleCallback::onRead(BLECharacteristic *pCharacteristic)
 {
-    const char *SERVICE_UUID = _serviceUUID.c_str();
-    const char *CHARACTERISTIC_UUID = _characteristicUUID.c_str();
+}
 
     BLEDevice::init("ESP32_BLE");
 
