@@ -74,6 +74,4 @@ void SampleCallback::onStatus(BLECharacteristic *pCharacteristic, Status s, uint
 // This method is called when the characteristic sends an indication.
 void SampleCallback::onIndicate(BLECharacteristic *pCharacteristic)
 {
-    // Handle BLE events here
-    // pServer->handleClient(); // Uncomment if needed
 }
