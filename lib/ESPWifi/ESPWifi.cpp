@@ -17,7 +17,7 @@ bool ESPWifi::IsSuccess(void)
 
 void ESPWifi::DisplayStatus()
 {
-    const String SSID = WiFi.SSID(void);
+    const String SSID = WiFi.SSID();
     
     Serial.println("---------------------");
     switch (WiFi.status()){
@@ -38,7 +38,10 @@ void ESPWifi::DisplayStatus()
             break;
     }
 
-    Serial.printf("IPV4 of %s: %s\n", SSID, WiFi.localIP());
-    Serial.printf("IPV6 of %s: %s\n", SSID, WiFi.localIPv6());
-    Serial.println("---------------------");
+    Serial.printf("IPV4 of %s: ", SSID);
+    Serial.print(WiFi.localIP());
+    Serial.printf("\nIPV6 of %s: ", SSID);
+    Serial.print(WiFi.localIPv6());
+    Serial.println("\n---------------------");
+    return;
 }

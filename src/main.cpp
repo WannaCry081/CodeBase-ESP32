@@ -3,14 +3,14 @@
 #include <ESPFirebase.hpp>
 // #include <ESPBlue.hpp>
 
-// const String SERVICE_UUID = "4fafc201-1fb5-459e-8fcc-c5c9c331914b";
-// const String CHARACTERISTIC_UUID = "beb5483e-36e1-4688-b7f5-ea07361b26a8";
+// const String SERVICE_UUID = "UNIQUE-GUID";
+// const String CHARACTERISTIC_UUID = "UNIQUE-GUID";
 
-const String WIFI_SSID = "Pagstudyna";
-const String WIFI_PASSWORD = "Data2Santi";
+const String WIFI_SSID = "WIFI-SSID";
+const String WIFI_PASSWORD = "WIFI-PASSWORD";
 
-const String API_KEY = "AIzaSyApj_PWjGm_aEsZmICo-SmOxyRGpUUy-qk";
-const String DATABASE_URL = "https://thermospectra-default-rtdb.firebaseio.com/";
+const String API_KEY = "FIREBASE-API-KEY";
+const String DATABASE_URL = "FIREBASE-RDMS-DATABASE-URL";
 
 // ESPBlue bluetooth(SERVICE_UUID, CHARACTERISTIC_UUID);
 ESPFirebase firebase(API_KEY, DATABASE_URL);
